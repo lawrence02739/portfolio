@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-wizard-bg: #07040D;
+  --color-wizard-deep: #0F071D;
+  --color-wizard-card: #130B24;
+  --color-lumos-purple: #A855F7;
+  --color-lumos-glow: #C084FC;
+  --color-snitch-gold: #D4AF37;
+  --color-snitch-light: #FDE047;
+  --color-ethereal-parchment: #F3E8FF;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #07040D;
+  color: #E9D5FF;
+  scroll-behavior: smooth;
+}
+
+/* Custom Mystical Purple & Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07040D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #581C87, #9333EA, #D4AF37);
+  border-radius: 4px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7E22CE, #C084FC, #F59E0B);
+}
+
+/* Harry Potter Font Classes */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', cursive, serif;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-signature {
+  font-family: 'Herr Von Muellerhoff', 'Great Vibes', cursive;
+}
+
+/* Runic & Lumos Animations */
+@keyframes lumos-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.35), 0 0 45px rgba(126, 34, 206, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(192, 132, 252, 0.6), 0 0 70px rgba(168, 85, 247, 0.35);
+  }
+}
+
+.lumos-glow {
+  animation: lumos-pulse 4s ease-in-out infinite;
+}
+
+@keyframes rune-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.rune-float {
+  animation: rune-float 6s ease-in-out infinite;
+}
